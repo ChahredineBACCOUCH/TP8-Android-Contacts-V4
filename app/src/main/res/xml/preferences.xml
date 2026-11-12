@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Préférences stockées dans les SharedPreferences (et non dans SQLite) -->
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/categorie_affichage">
+
+        <ListPreference
+            app:defaultValue="16"
+            app:entries="@array/tailles_libelles"
+            app:entryValues="@array/tailles_valeurs"
+            app:key="taille_police"
+            app:title="@string/pref_taille"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="#000000"
+            app:entries="@array/couleurs_libelles"
+            app:entryValues="@array/couleurs_valeurs"
+            app:key="couleur_preferee"
+            app:title="@string/pref_couleur"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/categorie_liste">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="appel_depuis_liste"
+            app:summaryOff="@string/pref_appel_non"
+            app:summaryOn="@string/pref_appel_oui"
+            app:title="@string/pref_appel" />
+    </PreferenceCategory>
+</PreferenceScreen>
